@@ -1,0 +1,215 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "autoincrement",
+ "creation": "2025-10-15 15:45:58.411797",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "familymember_id",
+  "first_name",
+  "age",
+  "husband_name",
+  "hhid",
+  "type_of_delivery",
+  "date_of_delivery",
+  "place_of_delivery",
+  "column_break_hzho",
+  "complication_identified",
+  "specify_complication",
+  "family_planning",
+  "family_planning_method",
+  "delivery_outcome",
+  "village",
+  "status",
+  "section_break_tavh",
+  "name_of_child",
+  "gender",
+  "date_of_birth",
+  "pre_term_born",
+  "admitted_for_complications",
+  "column_break_bgyl",
+  "birth_weight",
+  "low_birth_status",
+  "breastfeed_after_delivery"
+ ],
+ "fields": [
+  {
+   "fieldname": "familymember_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Name",
+   "options": "Pregnancy Registration"
+  },
+  {
+   "fetch_from": "familymember_id.first_name",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "First Name"
+  },
+  {
+   "fetch_from": "familymember_id.age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fetch_from": "familymember_id.name_of_the_husband",
+   "fieldname": "husband_name",
+   "fieldtype": "Data",
+   "label": "Husband Name"
+  },
+  {
+   "fetch_from": "familymember_id.hhid",
+   "fetch_if_empty": 1,
+   "fieldname": "hhid",
+   "fieldtype": "Data",
+   "label": "HHID"
+  },
+  {
+   "fieldname": "type_of_delivery",
+   "fieldtype": "Select",
+   "label": "Type of Delivery",
+   "options": "\nNormal Delivery\nForceps\nC-Section"
+  },
+  {
+   "fieldname": "date_of_delivery",
+   "fieldtype": "Date",
+   "label": "Date of delivery"
+  },
+  {
+   "fieldname": "place_of_delivery",
+   "fieldtype": "Data",
+   "label": "Place of Delivery",
+   "options": "Place of Delivery"
+  },
+  {
+   "fieldname": "column_break_hzho",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "complication_identified",
+   "fieldtype": "Select",
+   "label": "Whether the mother had any complication identified during delivery/till date",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "specify_complication",
+   "fieldtype": "Data",
+   "label": "If Yes, Specify the complication"
+  },
+  {
+   "fieldname": "family_planning",
+   "fieldtype": "Select",
+   "label": "Did the mother accept any postpartum family planning services?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "family_planning_method",
+   "fieldtype": "Select",
+   "label": "If yes, specify the method",
+   "options": "\nPPIUCD\nPPTL"
+  },
+  {
+   "fieldname": "delivery_outcome",
+   "fieldtype": "Select",
+   "label": "Delivery Outcome",
+   "options": "\nLive Birth\nStill Birth"
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Data",
+   "label": "Community/village"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nActive\nInactive"
+  },
+  {
+   "fieldname": "section_break_tavh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "name_of_child",
+   "fieldtype": "Data",
+   "label": "Name of Child"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nFemale\nMale"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "pre_term_born",
+   "fieldtype": "Select",
+   "label": "Whether the child is pre-term born",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "admitted_for_complications",
+   "fieldtype": "Select",
+   "label": "Was the child admitted to SNCU/ICU/PICU due to any complications",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_bgyl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "birth_weight",
+   "fieldtype": "Int",
+   "label": "Birth Weight"
+  },
+  {
+   "fieldname": "low_birth_status",
+   "fieldtype": "Select",
+   "label": "Low Birth Status",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "breastfeed_after_delivery",
+   "fieldtype": "Select",
+   "label": "Did you breastfeed your baby immediately after delivery?",
+   "options": "\nYes\nNo"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-15 15:46:03.886581",
+ "modified_by": "Administrator",
+ "module": "Chw",
+ "name": "Birth Registration PVC",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "first_name"
+}

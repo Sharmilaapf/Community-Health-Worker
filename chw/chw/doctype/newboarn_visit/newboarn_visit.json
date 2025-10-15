@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "autoincrement",
+ "creation": "2025-10-15 15:33:15.095513",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "mother_name",
+  "age",
+  "husband_name",
+  "date_of_delivery",
+  "column_break_gemo",
+  "newborn_condition",
+  "observed_breastfeeding",
+  "breastfeeding",
+  "given_otherthan_breastmilk",
+  "feedchild",
+  "postpartum_complications",
+  "complication_types"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "options": "Birth registration PNC"
+  },
+  {
+   "fetch_from": "first_name.first_name",
+   "fetch_if_empty": 1,
+   "fieldname": "mother_name",
+   "fieldtype": "Data",
+   "label": "Mother Name"
+  },
+  {
+   "fetch_from": "first_name.age",
+   "fetch_if_empty": 1,
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fetch_from": "first_name.husband_name",
+   "fetch_if_empty": 1,
+   "fieldname": "husband_name",
+   "fieldtype": "Data",
+   "label": "Name of the husband"
+  },
+  {
+   "fetch_from": "first_name.date_of_delivery",
+   "fetch_if_empty": 1,
+   "fieldname": "date_of_delivery",
+   "fieldtype": "Date",
+   "label": "Date of delivery"
+  },
+  {
+   "fieldname": "column_break_gemo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "newborn_condition",
+   "fieldtype": "Select",
+   "label": "How is the condition of new-born",
+   "options": "\nHealthy & alive\nSick\nDead"
+  },
+  {
+   "fieldname": "observed_breastfeeding",
+   "fieldtype": "Select",
+   "label": "Have you observed breast feeding",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "breastfeeding",
+   "fieldtype": "Select",
+   "label": "Is baby breast feeding properly",
+   "options": "\nYes\nNo"
+  },
+  {
+   "description": "(except medicine or ORS)",
+   "fieldname": "given_otherthan_breastmilk",
+   "fieldtype": "Select",
+   "label": "Was the baby given anything other than breast milk in last 24 hours?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "feedchild",
+   "fieldtype": "Select",
+   "label": "If yes, what did you feed the child",
+   "options": "\nBottle feeding (Cow milk etc)\nWater (Hot/cold)\nOther"
+  },
+  {
+   "fieldname": "postpartum_complications",
+   "fieldtype": "Select",
+   "label": "Does the mother have any post-partum complications?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "complication_types",
+   "fieldtype": "Select",
+   "label": "What type of complication",
+   "options": "\nFever,\nExcessive bleeding\nFoul smell from vagina\nConvulsion/fits\nSevere Abdominal pain\nSore breast/Cracked nipple\nMood change and abnormal behavior\nPerineal swelling and infection\nOthers"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-15 15:33:15.095513",
+ "modified_by": "Administrator",
+ "module": "Chw",
+ "name": "Newboarn Visit",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,8 @@
+// Copyright (c) 2025, Sharmila and contributors
+// For license information, please see license.txt
+
+// frappe.ui.form.on("NCD New One", {
+// 	refresh(frm) {
+
+// 	},
+// });

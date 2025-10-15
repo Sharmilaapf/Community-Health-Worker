@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "autoincrement",
+ "creation": "2025-10-15 10:41:09.661109",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "first_name",
+  "age",
+  "date_of_registration",
+  "column_break_mtjh",
+  "diagnosed",
+  "visitedthehealthcentre",
+  "wherevisited",
+  "hypertension_section",
+  "are_you_willing_to_undergo_screening_for_blood_pressure",
+  "hypertension",
+  "risk_level_hypertension",
+  "diabetes_section",
+  "are_you_willing_to_undergo_screening_for_blood_sugar_level",
+  "diabetes",
+  "risk_level_diabetes"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "link_filters": "[[\"Family member\",\"age\",\">=\",30]]",
+   "options": "Family member"
+  },
+  {
+   "fetch_from": "name1.first_name",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "First Name"
+  },
+  {
+   "fetch_from": "name1.age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Age"
+  },
+  {
+   "fieldname": "date_of_registration",
+   "fieldtype": "Date",
+   "label": "Date of registration"
+  },
+  {
+   "fieldname": "column_break_mtjh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "diagnosed",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Has he/she diagnosed as",
+   "options": "\nHypertensive\nDiabetic\nBoth"
+  },
+  {
+   "fieldname": "visitedthehealthcentre",
+   "fieldtype": "Select",
+   "label": "Has this person visited the health centre as the part of regular health checkup",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "wherevisited",
+   "fieldtype": "Select",
+   "label": "If yes, where he/she has visited ",
+   "options": "\nGovernment hospital\nAzim Premji Foundation health centre\nPrivate hospital\nQuacks\nOthers"
+  },
+  {
+   "fieldname": "hypertension_section",
+   "fieldtype": "Section Break",
+   "label": "Hypertension"
+  },
+  {
+   "fieldname": "are_you_willing_to_undergo_screening_for_blood_pressure",
+   "fieldtype": "Select",
+   "label": "Are you willing to undergo screening for blood pressure?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "hypertension",
+   "fieldtype": "Data",
+   "label": "Hypertension",
+   "options": "Hypertension"
+  },
+  {
+   "fieldname": "risk_level_hypertension",
+   "fieldtype": "Select",
+   "label": "Risk level",
+   "options": "\nNormal\npre-hypertensive (Low risk)\nstage 1(High risk)\nstage II (High risk)"
+  },
+  {
+   "fieldname": "diabetes_section",
+   "fieldtype": "Section Break",
+   "label": "Diabetes"
+  },
+  {
+   "fieldname": "are_you_willing_to_undergo_screening_for_blood_sugar_level",
+   "fieldtype": "Select",
+   "label": "Are you willing to undergo screening for blood sugar level?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "diabetes",
+   "fieldtype": "Data",
+   "label": "Diabetes",
+   "options": "Diabetes"
+  },
+  {
+   "fieldname": "risk_level_diabetes",
+   "fieldtype": "Select",
+   "label": "Risk level ",
+   "options": "\nNormal\npre-hypertensive (Low risk)\nstage 1(High risk)\nstage II (High risk)"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-15 10:41:09.661109",
+ "modified_by": "Administrator",
+ "module": "Chw",
+ "name": "NCD New One",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "first_name"
+}

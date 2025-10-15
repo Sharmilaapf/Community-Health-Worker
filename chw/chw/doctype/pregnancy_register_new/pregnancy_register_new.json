@@ -1,0 +1,195 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "autoincrement",
+ "creation": "2025-10-15 11:02:51.345156",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "registration_tab",
+  "familymember_id",
+  "first_name",
+  "age",
+  "status",
+  "village",
+  "name_of_the_husband",
+  "hhid",
+  "date_of_last_menstrual_period",
+  "estimated_date_of_delivery",
+  "edd_ultrasonography",
+  "blood_group",
+  "column_break_jqpu",
+  "number_of_living_children",
+  "number_of_children_died",
+  "number_of_abortionmiscarriages",
+  "any_stillbirth",
+  "gravida",
+  "any_pre_existing_diseases",
+  "availability_of_mcp_card",
+  "previous_delivery_mode",
+  "high_risk"
+ ],
+ "fields": [
+  {
+   "fieldname": "registration_tab",
+   "fieldtype": "Tab Break",
+   "label": "Registration"
+  },
+  {
+   "fieldname": "familymember_id",
+   "fieldtype": "Data",
+   "label": "Name",
+   "link_filters": "[[\"Family member\",\"gender\",\"=\",\"Female\"],[\"Family member\",\"age\",\">=\",15]]",
+   "options": "Family member"
+  },
+  {
+   "fetch_from": "familymember_id.first_name",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "First Name"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fetch_from": "familymember_id.status",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status"
+  },
+  {
+   "fetch_from": "familymember_id.status",
+   "fieldname": "village",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Commuity/Village"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "name_of_the_husband",
+   "fieldtype": "Data",
+   "label": "Name of the husband"
+  },
+  {
+   "fetch_from": "familymember_id.hhid",
+   "fetch_if_empty": 1,
+   "fieldname": "hhid",
+   "fieldtype": "Data",
+   "label": "HHID"
+  },
+  {
+   "fieldname": "date_of_last_menstrual_period",
+   "fieldtype": "Date",
+   "label": "Date of last menstrual period LMP"
+  },
+  {
+   "fieldname": "estimated_date_of_delivery",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Estimated date of delivery EDD"
+  },
+  {
+   "fieldname": "edd_ultrasonography",
+   "fieldtype": "Date",
+   "label": "EDD based on Ultrasonography "
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Select",
+   "label": "Blood group",
+   "options": "\nA positive (A+)\nA negative (A-)\nB positive (B+)\nB negative (B-)\nO positive (O+)\nO negative (O-)\nAB positive (AB+)\nAB negative (AB-)"
+  },
+  {
+   "fieldname": "column_break_jqpu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "number_of_living_children",
+   "fieldtype": "Int",
+   "label": "Number of living children"
+  },
+  {
+   "fieldname": "number_of_children_died",
+   "fieldtype": "Int",
+   "label": "Number of children died"
+  },
+  {
+   "fieldname": "number_of_abortionmiscarriages",
+   "fieldtype": "Int",
+   "label": "Number of abortion/Miscarriages "
+  },
+  {
+   "fieldname": "any_stillbirth",
+   "fieldtype": "Int",
+   "label": "Any stillbirth"
+  },
+  {
+   "fieldname": "gravida",
+   "fieldtype": "Int",
+   "label": "Number of pregnancy(Gravida)"
+  },
+  {
+   "fieldname": "any_pre_existing_diseases",
+   "fieldtype": "Select",
+   "label": "Any pre existing diseases",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "availability_of_mcp_card",
+   "fieldtype": "Select",
+   "label": "Availability of MCP card",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "previous_delivery_mode",
+   "fieldtype": "Select",
+   "label": "Previous delivery mode",
+   "options": "\nNormal\nC-section"
+  },
+  {
+   "description": "1.\tIf age is less than 18 years (on the day of LMP)\n2.\tAny abortion or miscarriage \n3.\tGravida more than 3 \n4.\tAny still birth\n5.\tPrevious mode of delivery \n6.\tPreexisting diseases \n",
+   "fieldname": "high_risk",
+   "fieldtype": "Select",
+   "label": "Has the pregnant women identified as having any high risk? ",
+   "options": "\nYes\nNo",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-15 11:02:51.345156",
+ "modified_by": "Administrator",
+ "module": "Chw",
+ "name": "pregnancy Register new",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "first_name"
+}

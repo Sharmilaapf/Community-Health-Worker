@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "autoincrement",
+ "creation": "2025-10-15 10:53:18.104498",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "familymember_id",
+  "first_name",
+  "date_of_birth",
+  "status",
+  "date_of_death",
+  "age",
+  "age_in_months",
+  "column_break_syof",
+  "place_of_death",
+  "village",
+  "place_of_death1",
+  "hhid",
+  "adult_age",
+  "the_age_of_the_person_in_monts",
+  "cause_of_death"
+ ],
+ "fields": [
+  {
+   "fieldname": "familymember_id",
+   "fieldtype": "Data",
+   "label": "Name",
+   "options": "Family member"
+  },
+  {
+   "fetch_from": "familymember_id.first_name",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First name "
+  },
+  {
+   "fetch_from": "familymember_id.date_of_birth",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "label": "Date of birth "
+  },
+  {
+   "fetch_from": "familymember_id.status",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status"
+  },
+  {
+   "fieldname": "date_of_death",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of death",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "familymember_id.age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age in year",
+   "options": "Family member"
+  },
+  {
+   "fieldname": "age_in_months",
+   "fieldtype": "Data",
+   "label": "Age in months"
+  },
+  {
+   "fieldname": "column_break_syof",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "place_of_death",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Place of death",
+   "options": "\nHome\nOn the way to health facility\nPublic health facility\nPrivate health facility\nOther",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "familymember_id.village",
+   "fieldname": "village",
+   "fieldtype": "Data",
+   "label": "Community/village"
+  },
+  {
+   "fetch_from": "familymember_id.village",
+   "fieldname": "place_of_death1",
+   "fieldtype": "Data",
+   "label": "Place of death1"
+  },
+  {
+   "fetch_from": "familymember_id.hhid",
+   "fieldname": "hhid",
+   "fieldtype": "Data",
+   "label": "HHID"
+  },
+  {
+   "fieldname": "adult_age",
+   "fieldtype": "Int",
+   "label": "The age of the person in years"
+  },
+  {
+   "fieldname": "the_age_of_the_person_in_monts",
+   "fieldtype": "Int",
+   "label": "The age of the person in monts"
+  },
+  {
+   "fieldname": "cause_of_death",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Cause of death",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-15 10:53:25.653249",
+ "modified_by": "Administrator",
+ "module": "Chw",
+ "name": "Death New",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "first_name"
+}
