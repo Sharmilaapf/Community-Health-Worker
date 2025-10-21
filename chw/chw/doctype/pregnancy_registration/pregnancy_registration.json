@@ -1,0 +1,373 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "autoincrement",
+ "creation": "2025-10-15 15:55:19.797726",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "registration_tab",
+  "familymember_id",
+  "first_name",
+  "age",
+  "status",
+  "village",
+  "name_of_the_husband",
+  "hhid",
+  "date_of_last_menstrual_period",
+  "estimated_date_of_delivery",
+  "edd_ultrasonography",
+  "blood_group",
+  "schedule",
+  "routine",
+  "column_break_jqpu",
+  "number_of_living_children",
+  "number_of_children_died",
+  "number_of_abortionmiscarriages",
+  "any_stillbirth",
+  "gravida",
+  "any_pre_existing_diseases",
+  "availability_of_mcp_card",
+  "previous_delivery_mode",
+  "high_risk",
+  "antenatal_visit_tab",
+  "antenatal_visit",
+  "follow_up_tab",
+  "general_section",
+  "has_the_pregnant_woman_migrated_out_for_delivery",
+  "if_yes_do_you_have_the_record_of_anc_services_availed",
+  "column_break_ihvu",
+  "date_of_abortion_miscarriage",
+  "is_the_pregnancy_terminated",
+  "did_you_have_the_anc_services_before_termination_of_pregnancy",
+  "section_break_xzna",
+  "received_thayi_card_mcp",
+  "consuming_ironfolic_acid_regularly",
+  "column_break_wrhp",
+  "receiving_supplementary_nutrition_in_awc",
+  "received_first_dose_of_tttt_booster",
+  "section_break_yyyk",
+  "has_the_family_identified_vehicle_for_transportation",
+  "has_the_family_identified_any_blood_donor",
+  "where_are_you_planning_for_delivery",
+  "column_break_lkgn",
+  "which_facility_have_you_identified_for_delivery",
+  "any_follow_up_visit_required",
+  "has_the_family_done_financial_arrangements",
+  "date_of_visit_proposed"
+ ],
+ "fields": [
+  {
+   "fieldname": "registration_tab",
+   "fieldtype": "Tab Break",
+   "label": "Registration"
+  },
+  {
+   "fieldname": "familymember_id",
+   "fieldtype": "Link",
+   "label": "Name",
+   "link_filters": "[[\"Family member\",\"gender\",\"=\",\"Female\"],[\"Family member\",\"age\",\">=\",15]]",
+   "options": "Family Member"
+  },
+  {
+   "fetch_from": "familymember_id.first_name",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "First Name"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fetch_from": "familymember_id.status",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status"
+  },
+  {
+   "fetch_from": "familymember_id.status",
+   "fieldname": "village",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Commuity/Village"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "name_of_the_husband",
+   "fieldtype": "Data",
+   "label": "Name of the husband"
+  },
+  {
+   "fetch_from": "familymember_id.hhid",
+   "fetch_if_empty": 1,
+   "fieldname": "hhid",
+   "fieldtype": "Data",
+   "label": "HHID"
+  },
+  {
+   "fieldname": "date_of_last_menstrual_period",
+   "fieldtype": "Date",
+   "label": "Date of last menstrual period LMP"
+  },
+  {
+   "fieldname": "estimated_date_of_delivery",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Estimated date of delivery EDD"
+  },
+  {
+   "fieldname": "edd_ultrasonography",
+   "fieldtype": "Date",
+   "label": "EDD based on Ultrasonography "
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Select",
+   "label": "Blood group",
+   "options": "\nA positive (A+)\nA negative (A-)\nB positive (B+)\nB negative (B-)\nO positive (O+)\nO negative (O-)\nAB positive (AB+)\nAB negative (AB-)"
+  },
+  {
+   "default": "Pregnant woman",
+   "fieldname": "schedule",
+   "fieldtype": "Link",
+   "label": "Schedule",
+   "options": "Schedule",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "schedule.routine_in_days",
+   "fieldname": "routine",
+   "fieldtype": "Data",
+   "label": "Routine",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jqpu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "number_of_living_children",
+   "fieldtype": "Int",
+   "label": "Number of living children"
+  },
+  {
+   "fieldname": "number_of_children_died",
+   "fieldtype": "Int",
+   "label": "Number of children died"
+  },
+  {
+   "fieldname": "number_of_abortionmiscarriages",
+   "fieldtype": "Int",
+   "label": "Number of abortion/Miscarriages "
+  },
+  {
+   "fieldname": "any_stillbirth",
+   "fieldtype": "Int",
+   "label": "Any stillbirth"
+  },
+  {
+   "fieldname": "gravida",
+   "fieldtype": "Int",
+   "label": "Number of pregnancy(Gravida)"
+  },
+  {
+   "fieldname": "any_pre_existing_diseases",
+   "fieldtype": "Select",
+   "label": "Any pre existing diseases",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "availability_of_mcp_card",
+   "fieldtype": "Select",
+   "label": "Availability of MCP card",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "previous_delivery_mode",
+   "fieldtype": "Select",
+   "label": "Previous delivery mode",
+   "options": "\nNormal\nC-section"
+  },
+  {
+   "description": "1.\tIf age is less than 18 years (on the day of LMP)\n2.\tAny abortion or miscarriage \n3.\tGravida more than 3 \n4.\tAny still birth\n5.\tPrevious mode of delivery \n6.\tPreexisting diseases \n",
+   "fieldname": "high_risk",
+   "fieldtype": "Select",
+   "label": "Has the pregnant women identified as having any high risk? ",
+   "options": "\nYes\nNo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "antenatal_visit_tab",
+   "fieldtype": "Tab Break",
+   "label": "Antenatal visit"
+  },
+  {
+   "fieldname": "antenatal_visit",
+   "fieldtype": "Table",
+   "label": "Antenatal visit",
+   "options": "Antenatal Vist"
+  },
+  {
+   "fieldname": "follow_up_tab",
+   "fieldtype": "Tab Break",
+   "label": "Follow_up"
+  },
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "has_the_pregnant_woman_migrated_out_for_delivery",
+   "fieldtype": "Select",
+   "label": "Has the pregnant woman migrated out (for delivery)?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "if_yes_do_you_have_the_record_of_anc_services_availed",
+   "fieldtype": "Select",
+   "label": "If yes, do you have the record of ANC services availed",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_ihvu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_abortion_miscarriage",
+   "fieldtype": "Date",
+   "label": "Date of abortion/ Miscarriage"
+  },
+  {
+   "fieldname": "is_the_pregnancy_terminated",
+   "fieldtype": "Select",
+   "label": "Is the pregnancy terminated",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "did_you_have_the_anc_services_before_termination_of_pregnancy",
+   "fieldtype": "Select",
+   "label": " Did you have the ANC services before termination of pregnancy ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "section_break_xzna",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "received_thayi_card_mcp",
+   "fieldtype": "Select",
+   "label": "Received 'Thayi' Card (MCP)?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "consuming_ironfolic_acid_regularly",
+   "fieldtype": "Select",
+   "label": "Consuming Iron/Folic Acid regularly?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_wrhp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "receiving_supplementary_nutrition_in_awc",
+   "fieldtype": "Select",
+   "label": "Receiving supplementary nutrition in AWC?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "received_first_dose_of_tttt_booster",
+   "fieldtype": "Select",
+   "label": "Received first dose of TT/TT booster?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "section_break_yyyk",
+   "fieldtype": "Section Break",
+   "label": "Birth preparation"
+  },
+  {
+   "fieldname": "has_the_family_identified_vehicle_for_transportation",
+   "fieldtype": "Select",
+   "label": "Has the family identified vehicle for transportation?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "has_the_family_identified_any_blood_donor",
+   "fieldtype": "Select",
+   "label": "Has the family identified any blood donor?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "where_are_you_planning_for_delivery",
+   "fieldtype": "Select",
+   "label": "Where are you planning for delivery",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_lkgn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "which_facility_have_you_identified_for_delivery",
+   "fieldtype": "Select",
+   "label": "Which facility have you identified for delivery",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "any_follow_up_visit_required",
+   "fieldtype": "Select",
+   "label": "Any follow_up visit required",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "has_the_family_done_financial_arrangements",
+   "fieldtype": "Select",
+   "label": "Has the family done financial arrangements?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "date_of_visit_proposed",
+   "fieldtype": "Date",
+   "label": "Date of visit proposed"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-15 19:57:35.572693",
+ "modified_by": "Administrator",
+ "module": "Chw",
+ "name": "Pregnancy Registration",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "first_name"
+}

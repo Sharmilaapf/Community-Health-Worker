@@ -1,0 +1,69 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-15 11:16:03.635733",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "village1",
+  "household1",
+  "date",
+  "picture_of_garden",
+  "comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "village1",
+   "fieldtype": "Link",
+   "label": "Village",
+   "options": "Village"
+  },
+  {
+   "fieldname": "household1",
+   "fieldtype": "Link",
+   "label": "Household",
+   "options": "Household"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "picture_of_garden",
+   "fieldtype": "Attach Image",
+   "label": "picture of garden"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Data",
+   "label": "Comments"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-15 19:21:42.476697",
+ "modified_by": "Administrator",
+ "module": "Chw",
+ "name": "Kitchen Garden",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class Infant43daysto6monthsNew(Document):
+class Newbornnew(Document):
 	pass

@@ -36,7 +36,7 @@
  "fields": [
   {
    "fieldname": "familymember_id",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Name",
@@ -82,9 +82,9 @@
   },
   {
    "fieldname": "place_of_delivery",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Place of Delivery",
-   "options": "Place of Delivery"
+   "options": "Place of delivery"
   },
   {
    "fieldname": "column_break_hzho",
@@ -187,10 +187,10 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-15 15:46:03.886581",
+ "modified": "2025-10-15 19:08:25.626861",
  "modified_by": "Administrator",
  "module": "Chw",
- "name": "Birth Registration PVC",
+ "name": "Birth Registration PNC",
  "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [

@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "autoincrement",
+ "creation": "2025-10-15 19:24:34.070052",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "familymember_id",
+  "first_name",
+  "village",
+  "hhid",
+  "date",
+  "status",
+  "anc",
+  "laboratory_tests",
+  "column_break_qrva",
+  "height",
+  "weight",
+  "blood_pressure",
+  "random_blood_sugar_level",
+  "hemoglobin_level",
+  "scanning",
+  "anaemia_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "familymember_id",
+   "fieldtype": "Link",
+   "label": "Name",
+   "options": "Family Member"
+  },
+  {
+   "fetch_from": "familymember_id.first_name",
+   "fetch_if_empty": 1,
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First name "
+  },
+  {
+   "fetch_from": "familymember_id.village",
+   "fieldname": "village",
+   "fieldtype": "Data",
+   "label": "Community/village"
+  },
+  {
+   "fetch_from": "familymember_id.hhid",
+   "fieldname": "hhid",
+   "fieldtype": "Data",
+   "label": "HHID"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Due Date",
+   "width": "1"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nScheduled\nCompleted"
+  },
+  {
+   "fieldname": "anc",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "ANC",
+   "options": "\n1st ANC\n2nd ANC\n3rd ANC\n4th ANC",
+   "width": "1"
+  },
+  {
+   "fieldname": "laboratory_tests",
+   "fieldtype": "Select",
+   "label": "Laboratory tests",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_qrva",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Height (cm)",
+   "width": "1"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Weight (kg)",
+   "width": "1"
+  },
+  {
+   "fieldname": "blood_pressure",
+   "fieldtype": "Int",
+   "label": "Blood pressure",
+   "width": "1"
+  },
+  {
+   "fieldname": "random_blood_sugar_level",
+   "fieldtype": "Int",
+   "label": "Random blood sugar level"
+  },
+  {
+   "fieldname": "hemoglobin_level",
+   "fieldtype": "Int",
+   "label": "Hemoglobin level"
+  },
+  {
+   "fieldname": "scanning",
+   "fieldtype": "Select",
+   "label": "Scanning",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "anaemia_status",
+   "fieldtype": "Select",
+   "label": "Anaemia status",
+   "options": "\nNormal\nMild\nModerate\nSevere"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-15 19:25:21.803617",
+ "modified_by": "Administrator",
+ "module": "Chw",
+ "name": "ANC Vist",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "first_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

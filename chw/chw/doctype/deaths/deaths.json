@@ -25,9 +25,9 @@
  "fields": [
   {
    "fieldname": "familymember_id",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Name",
-   "options": "Family member"
+   "options": "Family Member"
   },
   {
    "fetch_from": "familymember_id.first_name",
@@ -57,9 +57,9 @@
   {
    "fetch_from": "familymember_id.age",
    "fieldname": "age",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Age in year",
-   "options": "Family member"
+   "options": "Family Member"
   },
   {
    "fieldname": "age_in_months",
@@ -117,7 +117,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-15 11:29:08.277063",
+ "modified": "2025-10-15 19:13:14.316004",
  "modified_by": "Administrator",
  "module": "Chw",
  "name": "Deaths",

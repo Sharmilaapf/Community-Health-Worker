@@ -1,27 +1,40 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "prompt",
- "creation": "2025-10-15 11:30:04.133812",
+ "creation": "2025-09-29 10:54:48.821868",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_it2g"
+  "sender",
+  "receiver",
+  "message"
  ],
  "fields": [
   {
-   "fieldname": "section_break_it2g",
-   "fieldtype": "Section Break"
+   "fieldname": "sender",
+   "fieldtype": "Link",
+   "label": "Sender",
+   "options": "User"
+  },
+  {
+   "fieldname": "receiver",
+   "fieldtype": "Link",
+   "label": "Receiver",
+   "options": "User"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Text",
+   "label": "Message"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-15 19:27:18.929313",
+ "modified": "2025-10-15 18:44:43.787043",
  "modified_by": "Administrator",
  "module": "Chw",
- "name": "Days",
- "naming_rule": "Set by user",
+ "name": "Chat Message",
  "owner": "Administrator",
  "permissions": [
   {

@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "autoincrement",
- "creation": "2025-10-15 15:33:15.095513",
+ "creation": "2025-10-15 10:52:09.226468",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -106,10 +106,10 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-15 19:41:48.618854",
+ "modified": "2025-10-15 19:11:20.362475",
  "modified_by": "Administrator",
  "module": "Chw",
- "name": "Newboarn Visit",
+ "name": "New born new",
  "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [

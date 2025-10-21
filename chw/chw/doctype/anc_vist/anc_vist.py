@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class BirthRegistrationPVC(Document):
+class ANCVist(Document):
 	pass

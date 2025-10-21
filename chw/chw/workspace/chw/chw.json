@@ -1,0 +1,74 @@
+{
+ "app": "frappe",
+ "charts": [],
+ "content": "[{\"id\":\"XNpnDN6HQu\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Community health profile\",\"col\":4}},{\"id\":\"_Z_e8qUUAu\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Household\",\"col\":4}},{\"id\":\"Cb0lvMyQ-_\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Pregnant Women\",\"col\":4}},{\"id\":\"QiD-mqGIr_\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"NCD\",\"col\":4}},{\"id\":\"hY8RWuWPU8\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Death\",\"col\":4}},{\"id\":\"R7cCOsaXwG\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Todolist\",\"col\":4}},{\"id\":\"IuLxhRQx-S\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Visit Summary - Monthly\",\"col\":4}},{\"id\":\"Bpqk4R42HB\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Report\",\"col\":4}},{\"id\":\"SwsgS4PmcY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"kitchen garden\",\"col\":3}}]",
+ "creation": "2025-10-15 22:19:26.473033",
+ "custom_blocks": [
+  {
+   "custom_block_name": "NCD",
+   "label": "NCD"
+  },
+  {
+   "custom_block_name": "Report",
+   "label": "Report"
+  },
+  {
+   "custom_block_name": "Death",
+   "label": "Death"
+  },
+  {
+   "custom_block_name": "Todolist",
+   "label": "Todolist"
+  },
+  {
+   "custom_block_name": "Household",
+   "label": "Household"
+  },
+  {
+   "custom_block_name": "Community health profile",
+   "label": "Community health profile"
+  },
+  {
+   "custom_block_name": "Pregnant Women",
+   "label": "Pregnant Women"
+  },
+  {
+   "custom_block_name": "Visit Summary - Monthly",
+   "label": "Visit Summary - Monthly"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "healthcare",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "CHW",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2025-10-15 23:01:06.027769",
+ "modified_by": "Administrator",
+ "module": "Chw",
+ "name": "CHW",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "kitchen garden",
+   "link_to": "Kitchen Garden",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "CHW",
+ "type": "Workspace"
+}

@@ -1,27 +1,36 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "prompt",
- "creation": "2025-10-15 11:30:04.133812",
+ "autoname": "autoincrement",
+ "creation": "2025-09-29 10:36:24.932169",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_it2g"
+  "name1",
+  "department"
  ],
  "fields": [
   {
-   "fieldname": "section_break_it2g",
-   "fieldtype": "Section Break"
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Name"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-15 19:27:18.929313",
+ "modified": "2025-10-15 18:36:26.142337",
  "modified_by": "Administrator",
  "module": "Chw",
- "name": "Days",
- "naming_rule": "Set by user",
+ "name": "Staff Management",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,7 +1,7 @@
 // Copyright (c) 2025, Sharmila and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Birth Registration PVC", {
+// frappe.ui.form.on("Kitchen Garden", {
 // 	refresh(frm) {
 
 // 	},
