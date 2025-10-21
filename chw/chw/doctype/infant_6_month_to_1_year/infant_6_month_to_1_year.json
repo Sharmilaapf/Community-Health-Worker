@@ -1,0 +1,348 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-15 15:01:42.666997",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "mother_tab",
+  "mother_section",
+  "first_name",
+  "mother_name",
+  "mothers_status",
+  "sickness_select",
+  "specify_sickness",
+  "awc",
+  "using_family_planning",
+  "if_yes_family_planning",
+  "column_break_lwnh",
+  "mother_has_fp_methods",
+  "prefer_more_children",
+  "duration_to_have_next_child",
+  "using_any_pf_mth",
+  "prefer_fp_mth",
+  "issue_while_feeding",
+  "if_yes_please_specify",
+  "child_section",
+  "child_name",
+  "delivery_date",
+  "child_status",
+  "if_sick",
+  "start_complementary_feeding",
+  "given_food",
+  "if_any_other_food",
+  "quantity_of_food",
+  "received_thr",
+  "last_immunised_date",
+  "vaccinespending_immunistation",
+  "column_break_junt",
+  "child_last_weighed",
+  "last_weight_measured",
+  "previous_hight_measured",
+  "last_lentgth_measured",
+  "nutritional_status_1",
+  "nutritional_status_2",
+  "visited_health_center_screening",
+  "any_follow_up",
+  "date_of_visit_proposed"
+ ],
+ "fields": [
+  {
+   "fieldname": "mother_tab",
+   "fieldtype": "Tab Break",
+   "label": "Mother"
+  },
+  {
+   "fieldname": "mother_section",
+   "fieldtype": "Section Break",
+   "label": "Mother"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Barcode",
+   "label": "Name",
+   "link_filters": "[[\"Family member\",\"age\",\">\",1]]",
+   "options": "Birth registration PNC"
+  },
+  {
+   "fetch_from": "familymember_id.first_name",
+   "fieldname": "mother_name",
+   "fieldtype": "Data",
+   "label": "Mother's name"
+  },
+  {
+   "fieldname": "mothers_status",
+   "fieldtype": "Select",
+   "label": "What is the status of the mother ?",
+   "options": "\nHealthy\nSick\nDead"
+  },
+  {
+   "depends_on": "eval: doc.mothers_status != 'Dead';",
+   "fieldname": "sickness_select",
+   "fieldtype": "Select",
+   "label": "If Sick, please select ",
+   "options": "\nFever\nExcessive bleeding\nFoul smell from vagina\nConvulsion/fits\nSevere Abdominal pain\nSore breast/Cracked nipple\nMood change and abnormalbehavior\nPerineal swelling and infection\nOthers (Please specify)"
+  },
+  {
+   "depends_on": "eval: doc.sickness_select == 'Others (Please specify)' && doc.mothers_status != 'Dead'",
+   "fieldname": "specify_sickness",
+   "fieldtype": "Data",
+   "label": "Please specify sickness",
+   "mandatory_depends_on": "eval: doc.sickness_select == 'Others (Please specify)' && doc.mothers_status != 'Dead'"
+  },
+  {
+   "depends_on": "eval:doc.mothers_status != 'Dead'",
+   "fieldname": "awc",
+   "fieldtype": "Select",
+   "label": "Are you registered for the take home ration at AWC ",
+   "mandatory_depends_on": "eval:doc.mothers_status != 'Dead'",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval: doc.using_family_planning == 'Yes' && doc.mothers_status != 'Dead';",
+   "fieldname": "using_family_planning",
+   "fieldtype": "Select",
+   "label": "Are you using any kind of family planning methods now? ",
+   "mandatory_depends_on": "eval: doc.using_family_planning == 'Yes' && doc.mothers_status != 'Dead';",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.mothers_status != 'Dead';",
+   "fieldname": "if_yes_family_planning",
+   "fieldtype": "Select",
+   "label": "If yes (Select the appropriate method) ",
+   "mandatory_depends_on": "eval:doc.mothers_status != 'Dead';",
+   "options": "\nFemale sterilisation\nIUCD\nAnthara Injection\nSubdermal contraceptive implant\nOral pills (Mala-N)\nChhaya\nFemale condoms"
+  },
+  {
+   "fieldname": "column_break_lwnh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.mothers_status != 'Dead' && doc.if_yes_family_planning !='Female sterilisation';",
+   "fieldname": "mother_has_fp_methods",
+   "fieldtype": "Select",
+   "label": "Currently does mother have any issues while using FP Methods ",
+   "mandatory_depends_on": "eval:doc.mothers_status != 'Dead' && doc.if_yes_family_planning !='Female sterilisation';",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.mothers_status != 'Dead' && doc.if_yes_family_planning !='Female sterilisation';",
+   "fieldname": "prefer_more_children",
+   "fieldtype": "Select",
+   "label": "Do you prefer to have more children? ",
+   "mandatory_depends_on": "eval:doc.mothers_status != 'Dead' && doc.if_yes_family_planning !='Female sterilisation';",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.mothers_status != 'Dead' && doc.if_yes_family_planning !='Female sterilisation';",
+   "fieldname": "duration_to_have_next_child",
+   "fieldtype": "Select",
+   "label": "When do you prefer to have next child ",
+   "mandatory_depends_on": "eval:doc.mothers_status != 'Dead' && doc.if_yes_family_planning !='Female sterilisation';",
+   "options": "\nBefore 1 year\nAfter 1 year\nAfter 2 years\nAfter 3 years\nHesitant to answer"
+  },
+  {
+   "depends_on": "eval:doc.mothers_status != 'Dead' && doc.if_yes_family_planning !='Female sterilisation';",
+   "fieldname": "using_any_pf_mth",
+   "fieldtype": "Select",
+   "label": "Are you planning to use any family planning method? ",
+   "mandatory_depends_on": "eval:doc.mothers_status != 'Dead' && doc.if_yes_family_planning !='Female sterilisation';",
+   "options": "\nYes\nNo\nHesitant to answer"
+  },
+  {
+   "depends_on": "eval:doc.mothers_status != 'Dead' && doc.if_yes_family_planning !='Female sterilisation';",
+   "fieldname": "prefer_fp_mth",
+   "fieldtype": "Select",
+   "label": "If yes, which method do you prefer to use?         ",
+   "mandatory_depends_on": "eval:doc.mothers_status != 'Dead' && doc.if_yes_family_planning !='Female sterilisation';",
+   "options": "\nFemale sterilisation\nIUCD\nAnthara Injection\nSubdermal contraceptive implant\nOral pills (Mala-N)\nChhaya\nFemale condoms"
+  },
+  {
+   "depends_on": "eval:doc.mothers_status != 'Dead'",
+   "fieldname": "issue_while_feeding",
+   "fieldtype": "Select",
+   "label": "Are you facing any issue while breastfeeding ?",
+   "mandatory_depends_on": "eval:doc.mothers_status != 'Dead'",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval: doc.issue_while_feeding == 'Yes';",
+   "fieldname": "if_yes_please_specify",
+   "fieldtype": "Data",
+   "label": "If yes, please specify ",
+   "mandatory_depends_on": "eval:doc.mothers_status != 'Dead'&& doc.issue_while_feeding == 'Yes';"
+  },
+  {
+   "fieldname": "child_section",
+   "fieldtype": "Section Break",
+   "label": "Child"
+  },
+  {
+   "fieldname": "child_name",
+   "fieldtype": "Link",
+   "label": "Child name",
+   "options": "Newboarn Visit"
+  },
+  {
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date"
+  },
+  {
+   "fieldname": "child_status",
+   "fieldtype": "Select",
+   "label": "What is the status of the child ",
+   "options": "\nHealthy\nSick\nDead"
+  },
+  {
+   "depends_on": "eval:doc.child_status!='Dead';",
+   "fieldname": "if_sick",
+   "fieldtype": "Data",
+   "label": "If Sick, specify ",
+   "mandatory_depends_on": "eval:doc.child_status!='Dead';"
+  },
+  {
+   "depends_on": "eval:doc.child_status!='Dead';",
+   "fieldname": "start_complementary_feeding",
+   "fieldtype": "Select",
+   "label": "Did you start to complementary feed to your child ?",
+   "mandatory_depends_on": "eval:doc.child_status!='Dead';",
+   "options": "\nSoon\nDuring fifth month\nAfter completion of six months\nAfter seven months"
+  },
+  {
+   "depends_on": "eval:doc.child_status!='Dead';",
+   "fieldname": "given_food",
+   "fieldtype": "Select",
+   "label": "What did you give to the child in last 24 hours ",
+   "mandatory_depends_on": "eval:doc.child_status!='Dead';",
+   "options": "\n1. Rice, Roti, Potato or Khichadi,\n2. Dal or Chana,\n3. Milk, Curd, Ghee or paneer,\n4. Green vegetables,\n5. Fruits,\n6. Egg,\n7. Fish/Meat\nOthers_ Pls specify"
+  },
+  {
+   "fieldname": "if_any_other_food",
+   "fieldtype": "Data",
+   "label": "Pls specify"
+  },
+  {
+   "depends_on": "eval:doc.child_status!='Dead';",
+   "fieldname": "quantity_of_food",
+   "fieldtype": "Select",
+   "label": "In last 24 hours, how much quantity food was given to child (1 Bowl- 100gms)",
+   "mandatory_depends_on": "eval:doc.child_status!='Dead';",
+   "options": "\nOne bowl\nTwo bowl\nThree bowl\nMore than three bowl"
+  },
+  {
+   "fieldname": "received_thr",
+   "fieldtype": "Select",
+   "label": "Has the child received THR last month",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "last_immunised_date",
+   "fieldtype": "Date",
+   "label": "When is the child last immunised "
+  },
+  {
+   "depends_on": "eval:doc.child_status!='Dead';",
+   "fieldname": "vaccinespending_immunistation",
+   "fieldtype": "Data",
+   "label": "Vaccines pending for immunisation ",
+   "mandatory_depends_on": "eval:doc.child_status!='Dead';"
+  },
+  {
+   "fieldname": "column_break_junt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.child_status!='Dead';",
+   "fieldname": "child_last_weighed",
+   "fieldtype": "Date",
+   "label": "When is the child last weighed ",
+   "mandatory_depends_on": "eval:doc.child_status!='Dead';"
+  },
+  {
+   "depends_on": "eval:doc.child_status!='Dead';",
+   "fieldname": "last_weight_measured",
+   "fieldtype": "Float",
+   "label": "Last weight measured ",
+   "mandatory_depends_on": "eval:doc.child_status!='Dead';"
+  },
+  {
+   "depends_on": "eval:doc.child_status!='Dead';",
+   "fieldname": "previous_hight_measured",
+   "fieldtype": "Date",
+   "label": "When was the previous time hight measured ",
+   "mandatory_depends_on": "eval:doc.child_status!='Dead';"
+  },
+  {
+   "depends_on": "eval:doc.child_status!='Dead';",
+   "fieldname": "last_lentgth_measured",
+   "fieldtype": "Data",
+   "label": "Last height measurement",
+   "mandatory_depends_on": "eval:doc.child_status!='Dead';"
+  },
+  {
+   "depends_on": "eval:doc.child_status!='Dead';",
+   "fieldname": "nutritional_status_1",
+   "fieldtype": "Data",
+   "label": "Nutritional status of the child (SAM/MAM/Normal) ",
+   "mandatory_depends_on": "eval:doc.child_status!='Dead';"
+  },
+  {
+   "depends_on": "eval:doc.child_status!='Dead';",
+   "fieldname": "nutritional_status_2",
+   "fieldtype": "Data",
+   "label": "Nutritional status of the child ",
+   "mandatory_depends_on": "eval:doc.child_status!='Dead';"
+  },
+  {
+   "depends_on": "eval:doc.child_status!='Dead';",
+   "fieldname": "visited_health_center_screening",
+   "fieldtype": "Select",
+   "label": "Has the child visited our Health Centre for screening? ",
+   "mandatory_depends_on": "eval:doc.child_status!='Dead';",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.child_status!='Dead';",
+   "fieldname": "any_follow_up",
+   "fieldtype": "Select",
+   "label": "Any follow-up visit required ",
+   "mandatory_depends_on": "eval:doc.child_status!='Dead';",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.child_status!='Dead' && doc.any_follow_up =='Yes';",
+   "fieldname": "date_of_visit_proposed",
+   "fieldtype": "Date",
+   "label": "Date of visit proposed ",
+   "mandatory_depends_on": "Eval:doc.child_status!='Dead' && doc.any_follow_up =='Yes';"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-21 11:47:11.095372",
+ "modified_by": "Administrator",
+ "module": "Chw",
+ "name": "Infant 6 month to 1 year",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

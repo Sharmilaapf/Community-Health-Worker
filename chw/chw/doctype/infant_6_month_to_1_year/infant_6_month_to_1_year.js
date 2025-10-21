@@ -1,12 +1,12 @@
 // Copyright (c) 2025, Sharmila and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Children 1 to 5 Year", {
+// frappe.ui.form.on("Infant 6 month to 1 year", {
 // 	refresh(frm) {
 
 // 	},
 // });
-frappe.ui.form.on('Children 1 to 5 Year', {
+frappe.ui.form.on('Infant 6 month to 1 year', {
 	refresh(frm) {
 		if (frm.doc.first_name == null) {
 	                    frappe.msgprint({
@@ -22,18 +22,4 @@ frappe.ui.form.on('Children 1 to 5 Year', {
 	    frappe.msgprint(__('Document updated successfully'));
 	    
 	}
-});
-
-frappe.ui.form.on('Children 1 to 5 Year', {
-    refresh(frm) {
-        if (!frm.doc.last_weighed) {
-            frm.set_value('last_weighed', frappe.datetime.now_datetime());
-        }
-        if (!frm.doc.immune) {
-            frm.set_value('immune', frappe.datetime.now_datetime());
-        }
-        if (!frm.doc.height_date) {
-            frm.set_value('height_date', frappe.datetime.now_datetime());
-        }
-    }
 });

@@ -1,0 +1,161 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "autoincrement",
+ "creation": "2025-10-15 15:56:23.924339",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "gender",
+  "relationship_to_hh_head",
+  "marital_status",
+  "mobile_no",
+  "pwd",
+  "column_break_rflq",
+  "date_of_birth",
+  "age",
+  "age_in_months",
+  "age_in_days",
+  "name_of_the_husband",
+  "mother_name",
+  "hhid",
+  "village",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Gender",
+   "options": "\nMale\nFemale\nTransgender"
+  },
+  {
+   "fieldname": "relationship_to_hh_head",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Relationship",
+   "options": "\nHead\nSpouse\nMother\nFather\nSon\nDaughter\nSon-in-law\nDaughter-in-law\nBrother\nSister\nGrandson\nGrand Daughter\nOther relatives\nNot related\nFather-in-law\nMother-in-law\nGrandfather\nGrandmother"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital status",
+   "options": "\nMarried\nSingle\nWidow\nDivorcee\nDeserted\nLive In Relation"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "pwd",
+   "fieldtype": "Select",
+   "label": "Is PWD?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_rflq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of birth"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Age"
+  },
+  {
+   "fieldname": "age_in_months",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Age in months"
+  },
+  {
+   "fieldname": "age_in_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Age in days"
+  },
+  {
+   "fieldname": "name_of_the_husband",
+   "fieldtype": "Data",
+   "label": "Husband / Father"
+  },
+  {
+   "fieldname": "mother_name",
+   "fieldtype": "Data",
+   "label": "Mother's Name"
+  },
+  {
+   "fieldname": "hhid",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "HHID",
+   "options": "Household",
+   "search_index": 1
+  },
+  {
+   "fetch_from": "hhid.village_community",
+   "fetch_if_empty": 1,
+   "fieldname": "village",
+   "fieldtype": "Data",
+   "label": "Community/village"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nActive\nInactive"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-21 12:03:18.311129",
+ "modified_by": "Administrator",
+ "module": "Chw",
+ "name": "Family Member",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "first_name,gender,age",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "first_name"
+}
